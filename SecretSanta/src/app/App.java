@@ -6,7 +6,12 @@ public class App {
 
     public static Scanner kbd = new Scanner(System.in);
 
-    private static Person AddPeople(int count) {
+    /**
+     * AddPerson()gathers person data and returns 
+     * a person object with data.
+     * @return Person(name, couple, partner).
+     */
+    private static Person AddPerson() {
         String name, partner;
         boolean couple;
         
@@ -32,7 +37,7 @@ public class App {
 
         // Adds peopel's information from command line.
         for (int i = 0; i < count; i++) {
-            people[i] = AddPeople(count);
+            people[i] = AddPerson();
         }
         
 
