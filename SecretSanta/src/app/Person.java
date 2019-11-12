@@ -3,7 +3,7 @@ package app;
 public class Person {
 
     private String name, partnerName;
-    private boolean inCouple;
+    private boolean inCouple, assigned;
 
 
     /**
@@ -14,6 +14,7 @@ public class Person {
         name = n;
         inCouple = false;
         partnerName = null;
+        assigned = false;
     }
 
     /**
@@ -24,8 +25,9 @@ public class Person {
      */
     public Person(String n, boolean couple, String partName) {
         name = n;
-        couple = inCouple;
+        inCouple = couple;
         partnerName = partName;
+        assigned = false;
     }
 
     /**
@@ -53,6 +55,14 @@ public class Person {
     }
 
     /**
+     * IsAssigned returns whether or not a person has been assiigned or not.
+     * @return assigned
+     */
+    public boolean isAssigned() {
+        return assigned;
+    }
+
+    /**
      * SetName() sets the name of the of the person.
      * @param n is the new name of the person.
      */
@@ -72,7 +82,14 @@ public class Person {
      * SetPartnerName() sets the name of the person's partner.
      * @param partName the new name of the partner.
      */
-    public void SetPartnerName(String partName) {
+    public void setPartnerName(String partName) {
         partnerName = partName;
+    }
+
+    /**
+     * SetAssign() sets whether or not someone has been assigned.
+     */
+    public void setAssign(boolean assign) {
+        assigned = assign;
     }
 }
