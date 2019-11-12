@@ -97,7 +97,8 @@ public class Person {
     }
 
     /**
-     * SetAssign() sets whether or not someone has been assigned.
+     * SetAssign() sets whether or not someone has been assigned to
+     * another person.
      */
     public void setAssign(boolean assign) {
         assigned = assign;
