@@ -2,7 +2,7 @@ package app;
 
 public class Person {
 
-    private String name, partnerName;
+    private String name, partnerName, assignment;
     private boolean inCouple, assigned;
 
 
@@ -15,6 +15,7 @@ public class Person {
         inCouple = false;
         partnerName = null;
         assigned = false;
+        assignment = null;
     }
 
     /**
@@ -28,6 +29,7 @@ public class Person {
         inCouple = couple;
         partnerName = partName;
         assigned = false;
+        assignment = null;
     }
 
     /**
@@ -63,6 +65,14 @@ public class Person {
     }
 
     /**
+     * GetAssignment() returns the name of the assigned person. 
+     */
+    public String getAssignment() {
+        return assignment;
+    }
+
+
+    /**
      * SetName() sets the name of the of the person.
      * @param n is the new name of the person.
      */
@@ -91,5 +101,13 @@ public class Person {
      */
     public void setAssign(boolean assign) {
         assigned = assign;
+    }
+
+    /**
+     * SetAssignments() sets the name of the person the
+     * current person is assigned to.
+     */
+    public void setAssignment(String assignedPerson) {
+        assignment = assignedPerson;
     }
 }
